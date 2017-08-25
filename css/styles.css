@@ -1,0 +1,1252 @@
+/*---this is jquery validation---*/
+.error {
+  text-align: center !important;
+  color: red;
+  display: block;
+}
+.menu-list {
+  margin-top: 5em;
+}
+.menu-list li {
+  display: block;
+}
+.menu-item {
+  line-height: 3em;
+  text-align: center;
+}
+.menu-item a {
+  color: white;
+  text-decoration: none;
+  list-style-type: none;
+  text-align: center;
+  line-height: 3em;
+}
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  border: none;
+}
+body {
+  font-family: 'Work Sans';
+  overflow-x: hidden;
+}
+
+/*All devices and mobile phone*/
+body:before {
+  content: 'mobile';
+  background-color: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  padding: 0.5em;
+  right: 0;
+  top: 0;
+  color: white;
+  z-index: 1;
+}
+.section {
+  overflow: hidden;
+}
+.section2 {
+  overflow: hidden;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+.section3, .section5 {
+  background-color: #E6ECF2
+}
+.logo-section1 {
+  font-size: 2.5em !important;
+  top: 0;
+  margin-top: 0.6em !important;
+  font-weight: 300 !important;
+}
+.menu-item a, .menu-item a:hover, .menu-item a:active, .menu-item a:focus {
+  background-color: rgba(0, 0, 0, 0);
+  color: #fff;
+  font-weight: 300;
+  font-size: 1.2em;
+}
+#slide-button {
+  width: 10em;
+  height: 100vh;
+  left: -10em;
+  position: fixed;
+  z-index: 70;
+  transition: all ease 1s;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+#slide-button.open {
+  left: 0em;
+}
+#slide-button .active {
+  border-bottom: 0.2em black solid;
+  background-color: #00B0FC;
+  line-height: 2em;
+}
+.menu-close-btn:hover {
+  transform: rotate(180deg);
+}
+.menu-close-btn:before {
+  content: "";
+  position: absolute;
+  display: block;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 32px;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.5);
+  transform: rotate(45deg);
+  transform-origin: center;
+}
+.menu-close-btn:after {
+  content: "";
+  position: absolute;
+  display: block;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 32px;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.5);
+  transform: rotate(-45deg);
+  transform-origin: center;
+}
+.menu-close-btn.show {
+  margin-left: 75%;
+  margin-top: 2.5em;
+  z-index: 20;
+  position: absolute;
+  color: black;
+  display: block;
+  width: 32px;
+  height: 32px;
+  transition: transform .25s ease-in-out;
+}
+.menu-close-btn {
+  display: none;
+}
+.main {
+  height: 7em;
+  width: 100%;
+  transition: all ease 1s;
+  margin: auto;
+  position: relative;
+}
+.main.fixed {
+  position: fixed;
+  z-index: 60;
+  background-color: rgba(0, 0, 0, 0.90);
+  margin: auto;
+  width: 100%;
+}
+
+/*----menu bar---*/
+#nav-icon1 {
+  width: 2.5em;
+  height: 2em;
+  position: absolute;
+  transform: rotate(0deg);
+  transition: .5s ease-in-out;
+  cursor: pointer;
+  margin-top: 3em;
+  left: 84%;
+}
+#nav-icon1 span.fixed {
+  background: #00B0FC;
+}
+#nav-icon1 span {
+  display: block;
+  position: absolute;
+  height: 0.1em;
+  width: 100%;
+  background: #193441;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+#nav-icon1 span:nth-child(1) {
+  top: 0px;
+}
+#nav-icon1 span:nth-child(2) {
+  top: 0.8em;
+}
+#nav-icon1 span:nth-child(3) {
+  top: 1.6em;
+}
+#nav-icon1.open span:nth-child(1) {
+  top: 18px;
+  transform: rotate(135deg);
+}
+#nav-icon1.open span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
+}
+#nav-icon1.open span:nth-child(3) {
+  top: 18px;
+  transform: rotate(-135deg);
+}
+
+/*---------------------------*/
+.background-image {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+  background-position-x: 50%;
+}
+.lorem {
+  color: #000;
+  transition: all ease 1s;
+  font-family: 'Work Sans';
+}
+.text-section2-A {
+  font-family: 'Work Sans';
+  font-weight: 400;
+  font-size: 5em;
+  letter-spacing: -0.05em;
+  margin-top: -1.1em;
+  position: absolute;
+  margin-left: -0.1em;
+}
+.text-section2 {
+  padding-top: 1em;
+  box-sizing: border-box;
+  font-weight: 300;
+  line-height: 0.8em;
+  font-size: 2.5em;
+  color: #00B0FC;
+}
+.text-main2.moved-in {
+  transform: translateY(0em);
+}
+.text-main2 {
+  text-align: left;
+  margin: auto;
+  text-align: left;
+  width: 90%;
+  padding-top: 3em;
+  box-sizing: border-box;
+}
+.container {
+  min-height: 110vh;
+}
+.title {
+  padding-top: 2em;
+  font-family: 'Work Sans';
+  font-weight: 300;
+  font-size: 1.3em;
+  text-align: left;
+  width: 90%;
+  margin: auto;
+  box-sizing: border-box;
+}
+.landing-img {
+  background-image: url('../images/img_section1.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+  background-position-x: 50%;
+  background-position-y: 50%;
+  height: 110vh;
+  image-rendering: auto;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+}
+.text-section1-A {
+  position: absolute;
+  margin: 9em auto;
+  font-family: 'Work Sans';
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: -0.05em;
+  font-size: 1.5em;
+}
+.text-section1-A:after {
+  content: '';
+  border-bottom: 0.3em #00B0FC solid;
+  width: 3em;
+  height: 0.2em;
+  display: block;
+}
+.text-section1-B {
+  position: absolute;
+  width: 90%;
+  font-size: 4.2em;
+  letter-spacing: em;
+  font-family: 'Work Sans';
+  font-weight: 300;
+  line-height: 0.7em;
+  color: #00B0FC;
+  letter-spacing: -0.08em;
+  margin-top: 3.9em;
+  margin-left: -0.05em;
+}
+.text-main {
+  width: 90%;
+  margin: auto;
+}
+.tracking-container {
+  display: flex;
+}
+.placeholder.show {
+  display: none;
+}
+.placeholder.hide {
+  display: show;
+}
+
+/*----------------*/
+form {
+  width: 100%;
+  margin: auto;
+  margin-top: 0.5em;
+}
+fieldset {
+  border-radius: 0;
+  width: 100%;
+  margin: auto !important;
+  padding: 0 !important;
+  border: none;
+}
+#guests, #days {
+  margin: auto !important;
+  display: block !important;
+  margin-bottom: 2em;
+  padding: 1em 1em;
+  width: 15em;
+  border: 1px solid #ccc;
+  box-shadow: inset 0 1px 3px #ddd;
+  border-radius: 3px;
+  text-align: center;
+  font-family: 'Muli';
+  font-weight: 100;
+}
+.builder-accordian_content {
+  margin: auto;
+  padding: 1.5em 0 0 0;
+  position: relative;
+  box-sizing: border-box;
+}
+.builder-accordian_head-title {
+  font-family: 'Work Sans';
+  font-weight: 400;
+}
+.builder-accordian_head {
+  background-color: white;
+  outline: thin #000 solid;
+  height: 5em;
+  width: 90%;
+  margin: auto;
+  position: relative;
+}
+.builder-accordian_head-tick {
+  background-color: #000;
+  color: white;
+  width: 2.5em;
+  height: 2.5em;
+  border-radius: 1.3em;
+  text-align: center;
+  vertical-align: middle;
+  font-family: 'Work Sans';
+  font-weight: 300;
+  position: absolute;
+  box-sizing: border-box;
+  margin: 1.2em 0 0 1.5em;
+  padding: 0.6em;
+}
+.builder-accordian_head-icon {
+  height: 2em;
+  width: 2em;
+  padding: 0;
+  position: relative;
+  left: 75%;
+  top: -50%;
+}
+i.down, i.up {
+  border: thin solid #000;
+  border-width: 0 0.1em 0.1em 0;
+  padding: 12px;
+  display: block;
+  position: absolute;
+}
+i.down {
+  left: 85%;
+}
+i.up {
+  left: 85%;
+  top: -50%;
+}
+.builder-tick-feedback {
+  background-image: url('../images/tick.png');
+  height: 2.5em !important;
+  width: 2.5em !important;
+  top: 1.2em !important;
+}
+.down {
+  transform: rotate(45deg);
+}
+.up {
+  transform: rotate(-135deg);
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-15px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+.bounce {
+  animation: bounce 2s infinite;
+}
+.builder-accordian_body, .meal-plan-accordian, .holiday-plan-accordian {
+  background-color: white;
+  outline: thin #000 solid;
+  margin: auto;
+  width: 90%;
+  position: relative;
+  box-sizing: border-box;
+}
+.holiday-accordian {
+  min-height: 20em;
+  background-color: white;
+  outline: thin #000 solid;
+  margin: auto;
+  width: 90%;
+  position: relative;
+  box-sizing: border-box;
+}
+h1 {
+  font-family: 'Work Sans';
+  font-weight: 400;
+  vertical-align: middle;
+  text-align: center;
+  padding-top: 1.8em;
+  font-size: 1em;
+  text-transform: uppercase;
+  box-sizing: border-box;
+}
+.pure-form input[type=text] {
+  padding: 1em 1em;
+  border: 1px solid #ccc;
+  border-radius: 0 !important;
+  vertical-align: middle;
+  box-sizing: border-box;
+  width: 25em;
+}
+#search-btn {
+  display: block;
+  margin-top: 2em;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  box-sizing: border-box;
+}
+.pure-button {
+  width: 8em;
+  background-color: #000;
+  color: white;
+  text-transform: uppercase;
+  font-family: 'Work Sans';
+  font-weight: 200;
+  vertical-align: middle;
+  text-align: center;
+  letter-spacing: 0.1em;
+  font-size: 0.8em;
+  line-height: 3.5em;
+  display: block;
+  color: #fff;
+  font-weight: 400;
+}
+.pure-button:hover {
+  background-color: #000;
+}
+.pure-form button[type=submit] {
+  margin: auto !important;
+}
+.image {
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 5em;
+  width: 90%;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  height: 14em;
+  z-index: 5;
+  background-size: cover;
+  margin-top: 1em;
+}
+.img-home-1 {
+  background-image: url(../images/hotel-section4-fiordland.jpg);
+}
+.img-home-2 {
+  background-image: url(../images/hostel-section4-picasso-fiordland.jpg);
+}
+.img-home-3 {
+  background-image: url(../images/motel-section4-masseria-tauranga.jpg);
+}
+.img-home-4 {
+  background-image: url(../images/house-section4-keri-auckland.jpg);
+}
+#radio-btn {
+  position: absolute;
+  z-index: 20;
+  margin-left: 90%;
+  margin-top: 5%;
+}
+#next-btn-home, #next-btn-meal {
+  height: 3.5em;
+}
+#back-btn-home, #back-btn-meal {
+  height: 3.5em;
+}
+#back-btn-cost {
+  text-align: center;
+  display: block;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  margin-top: 1em;
+}
+.img-meal-1 {
+  background-image: url(../images/tekuiti-salad.jpg);
+}
+.img-meal-2 {
+  background-image: url(../images/matamata-big-breakfast.jpg);
+}
+.img-meal-3 {
+  background-image: url(../images/rangitoto-waffles.jpg);
+}
+.img-meal-4 {
+  background-image: url(../images/hokitika-toast.jpg);
+}
+input[type=radio] {
+  display: none;
+}
+#hotelAR, #hostelBR, #motelCR, #houseDR, #AR, #BR, #CR, #DR, .builder-tick-feedback {
+  display: block;
+  width: 2em;
+  height: 2em;
+  border: thin #000 solid;
+  position: absolute;
+  top: 1.5em;
+  right: 1.5em;
+  border-radius: 50%;
+  background-color: white;
+  background-size: contain;
+}
+input[type=radio]:checked ~ #hotelAR {
+  background-image: url('../images/tick.png')
+}
+input[type=radio]:checked ~ #hostelBR {
+  background-image: url('../images/tick.png')
+}
+input[type=radio]:checked ~ #motelCR {
+  background-image: url('../images/tick.png')
+}
+input[type=radio]:checked ~ #houseDR {
+  background-image: url('../images/tick.png')
+}
+input[type=radio]:checked ~ #AR {
+  background-image: url('../images/tick.png')
+}
+input[type=radio]:checked ~ #BR {
+  background-image: url('../images/tick.png')
+}
+input[type=radio]:checked ~ #CR {
+  background-image: url('../images/tick.png')
+}
+input[type=radio]:checked ~ #DR {
+  background-image: url('../images/tick.png')
+}
+
+/*-----change the plus minus icon to different style--*/
+.planA.enable, .planB.enable, .planC.enable, .planD.enable {
+  background-color: white;
+  z-index: 30;
+}
+.planA, .planB, .planC, .planD {
+  height: 23em;
+}
+.mealA, .mealB, .mealC, .mealD {
+  height: 20em;
+}
+.planE, .mealE {
+  height: 8em;
+  width: 90%;
+  justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+}
+#priceA, #priceB, #priceC, #priceD, #mealpriceA, #mealpriceB, #mealpriceC, #mealpriceD {
+  width: 100%;
+  font-size: 1.5em;
+  font-weight: 300;
+  color: #00B0FC;
+  font-family: 'Poppins';
+}
+.price-container {
+  height: 5em;
+  width: 90%;
+  box-sizing: border-box;
+  padding-top: 16em;
+  margin: auto;
+}
+.disable-container {
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 23em;
+  position: absolute;
+  width: 100%;
+  margin: auto;
+  bottom: 0.01em;
+  z-index: 20;
+}
+.cost-plan-accordian {
+  min-height: 15em;
+}
+.accomodation-price, .meal-price, .total-price {
+  height: 2em;
+  flex: 0 0 35%;
+  margin-left: 2em;
+}
+.accomodation-output, .meal-output, .total-output {
+  height: 2em;
+  flex: 0 0 25%;
+}
+.acco-dollar, .meal-dollar, .total-dollar {
+  flex: 0 0 30%;
+  text-align: right;
+}
+.plan-options, .meal-options {
+  margin-bottom: 5em;
+}
+.total-cost {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.section2-sub-heading {
+  margin-bottom: 3em;
+}
+.x.hidden {
+  display: none;
+}
+.x {
+  display: block;
+  outline: thin red solid;
+  right: 0;
+  top: 0;
+  width: 32px;
+  height: 32px;
+  transition: transform .25s ease-in-out;
+}
+.x:hover {
+  transform: rotate(180deg);
+}
+.x:before {
+  content: "";
+  position: absolute;
+  display: block;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 32px;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.5);
+  transform: rotate(45deg);
+  transform-origin: center;
+}
+.x:after {
+  content: "";
+  position: absolute;
+  display: block;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 32px;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.5);
+  transform: rotate(-45deg);
+  transform-origin: center;
+}
+
+/*------section3-----------------*/
+.text-main-container {
+  width: 90%;
+  margin: auto;
+  top: 0;
+  position: relative;
+}
+.text-section3-A, .text-section4-A {
+  font-weight: 400;
+  font-size: 5em;
+  letter-spacing: -0.05em;
+  margin-top: -0.6em;
+  position: absolute;
+  margin-left: -0.1em;
+  box-sizing: border-box;
+  width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.text-section-sub-heading {
+  padding-top: 5em;
+  font-size: 1.3em;
+  box-sizing: border-box;
+  line-height: 1.4em;
+  letter-spacing: -0.05em;
+  hyphens: auto;
+  font-weight: 300;
+}
+.image-container {
+  box-shadow: 2px 2px 10px #888888;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  height: 25em;
+  z-index: 10;
+  background-size: cover;
+  margin: 8em 0 0 auto;
+  display: block;
+  image-rendering: auto;
+  image-rendering: pixelated;
+  filter: sepia(20%);
+  filter: contrast(100%);
+}
+.img-cont-section3-A {
+  background-image: url('../images/fiordland.jpg');
+}
+.layer-image-container:hover {
+  box-shadow: 36px 36px 0 #000;
+}
+.image-container:hover {
+  filter: sepia(100%);
+}
+.img-cont-section3-B {
+  background-image: url('../images/mueller_hut_mtcook.jpg');
+}
+.img-cont-section3-C {
+  background-image: url('../images/img_landing_page_1.jpg');
+}
+.img-cont-section3-D {
+  background-image: url('../images/img_landing_page_2.jpg');
+}
+.text3-P {
+  z-index: 10;
+  margin: auto;
+  padding: 0;
+  font-weight: 300;
+}
+.text3-read {
+  font-weight: 300;
+  z-index: 10;
+  width: 100%;
+  margin: auto;
+}
+.text-section3-C {
+  font-size: 4em;
+  font-weight: 300;
+  color: #00B0FC;
+  z-index: 10;
+}
+.text3-right-description {
+  text-align: right;
+}
+.text3-right-title {
+  text-align: right;
+  margin-top: -0.5em;
+}
+.text3-left-title {
+  text-align: left;
+  margin-top: -0.5em;
+}
+.image-fiordland {
+}
+.section3-btn-right {
+  text-align: right;
+  position: relative;
+  height: 4em;
+  display: block;
+}
+#read-more-btn-right-fiordland, #read-more-btn-right-mtcook {
+  background-color: #00B0FC;
+  width: 10em;
+  display: inline-block;
+  margin-top: 0.8em;
+}
+.section3-btn-left {
+  text-align: left;
+  position: relative;
+  height: 4em;
+  display: block;
+}
+#read-more-btn-left-tongariro, #read-more-btn-left-queenstown {
+  background-color: #00B0FC;
+  width: 10em;
+  display: inline-block;
+  margin-top: 0.8em;
+}
+.read-description-right-fiordland>p, .read-description-right-mtcook>p {
+  width: 100%;
+  transition: all cubic-bezier(.26, .79, .64, .18) 1s;
+  text-align: right;
+}
+.read-description-right-fiordland>p.show, .read-description-right-mtcook>p.show {
+  height: 0;
+}
+.qt-title {
+  text-align: left;
+  margin-top: -0.5em;
+  line-height: 0.8em;
+}
+
+/*@keyframes slideInDown {
+from {
+transform: translate3d(0, -100%, 0);
+visibility: visible;
+}
+
+to {
+transform: translate3d(0, 0, 0);
+}
+}
+
+.slideInDown {
+animation-name: slideInDown;
+}
+
+
+/*---------------------------------*/
+.read-description-left-slider {
+  padding-bottom: 8em;
+  width: 90%;
+  margin: auto;
+  box-sizing: border-box;
+}
+.more-places {
+  height: 10em;
+  width: 90%;
+  margin: auto;
+}
+
+/*------section 4-------swiper plugin-----*/
+
+/*---hotel section4 swiper plugin------*/
+
+.beautiful-homes {
+  font-weight: 300;
+  font-size: 4em;
+  line-height: 0.8em;
+  margin-top: 1.4em;
+  z-index: 20;
+  color: #00B0FC;
+}
+.img-cont-section4-A {
+  height: 30em;
+  box-shadow: none;
+}
+.title-on-box {
+  font-size: 2.5em;
+  color: white;
+  width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-left: 0;
+  padding-top: 1em;
+}
+.tob-right {
+  text-align: right;
+}
+.tob-left {
+  text-align: left;
+  color: #00B0FC;
+  z-index: 20;
+}
+.img-homesA-A {
+  background-image: url('../images/hotel-title-section4.jpg');
+}
+.img-homesB-1 {
+  background-image: url('../images/hotel3-title-section4.jpg');
+}
+.img-homesA-B {
+  background-image: url('../images/hotel2-title-section4.jpg');
+  padding-top: 0;
+  margin-top: 3em;
+}
+.img-cont-section4-B {
+  height: 25em;
+  width: 80%;
+  margin: auto;
+  margin-top: 3em;
+  box-shadow: none;
+}
+.swiper-cont-hotel, .swiper-cont-hostel, .swiper-cont-motel, .swiper-cont-house {
+  margin-top: 9.5em;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.swiper-container {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 10;
+  height: 350px !important;
+  width: 100%;
+  height: 100%;
+}
+.swiper-container-horizontal>.swiper-pagination-bullets {
+  bottom: 10px !important;
+  left: 0;
+  width: 100%;
+}
+.swiper-slide.s1 {
+  height: 300px !important;
+  width: 210px !important;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.subtitle {
+  color: #fff;
+  padding-top: 3em;
+  margin-left: -0.2em;
+  box-sizing: border-box;
+  font-size: 2em;
+}
+.slide-1-hotel {
+  background-image: url('../images/hotel-section4-auckland.jpg');
+}
+.slide-2-hotel {
+  background-image: url('../images/hotel-section4-wellington.jpg');
+  background-position-x: 70%;
+}
+.slide-3-hotel {
+  background-image: url('../images/hotel-section4-queenstown.jpg');
+  background-position-x: 50%;
+}
+.slide-4-hotel {
+  background-image: url('../images/hotel-section4-nelson.jpg');
+  background-position-x: 50%;
+}
+.slide-5-hotel {
+  background-image: url('../images/hotel-section4-christchurch.jpg');
+  background-position-x: 50%;
+}
+.slide-6-hotel {
+  background-image: url('../images/hotel-section4-tauranga.jpg');
+  background-position-x: 20%;
+}
+.slide-7-hotel {
+  background-image: url('../images/hotel-section4-napier.jpg');
+  background-position-x: 50%;
+}
+.slide-8-hotel {
+  background-image: url('../images/hotel-section4-fiordland.jpg');
+}
+.slide-9-hotel {
+  background-image: url('../images/hotel-section4-tongariro.jpg');
+  background-position-x: 70%;
+}
+.slide-10-hotel {
+  background-image: url('../images/hotel-section4-mtcook.jpg');
+}
+.swiper-wrapper {
+  margin-left: 20px !important;
+}
+
+/*--swiper single view with navigation buttons-----*/
+
+/*----swiper plugin hostel section4-------*/
+
+
+.swiper-container.s2 {
+  height: 450px !important;
+}
+.swiper-wrapper.s2 {
+  box-sizing: border-box;
+  margin-left: 0 !important;
+}
+.subtitle-s2 {
+  margin-top: 2.4em;
+  font-size: 2.5em;
+  margin-left: 0.01em;
+}
+.slide-B-1-hostel {
+  background-image: url('../images/hostel-section4-eastseven-queenstown.jpg');
+}
+.slide-B-2-hostel {
+  background-image: url('../images/hostel-section4-hobart-nelson.jpg');
+}
+.slide-B-3-hostel {
+  background-image: url('../images/hostel-section4-baroque-queenstown.jpg');
+}
+.slide-B-4-hostel {
+  background-image: url('../images/hostel-section4-chillout-christchurch.jpg');
+}
+.slide-B-5-hostel {
+  background-image: url('../images/hostel-section4-oasis-tongariro.jpg');
+}
+.slide-B-6-hostel {
+  background-image: url('../images/hostel-section4-oasis-auckland.jpg');
+}
+.slide-B-6-hostel {
+  background-image: url('../images/hostel-section4-richmond-wellington.jpg');
+}
+.slide-B-7-hostel {
+  background-image: url('../images/hostel-section4-sthaven--dunedin.jpg');
+}
+.slide-B-8-hostel {
+  background-image: url('../images/hostel-section4-snowmountain-mtcook.jpg');
+}
+.slide-B-9-hostel {
+  background-image: url('../images/hostel-section4-wolfrise-queenstown.jpg');
+}
+.slide-B-10-hostel {
+  background-image: url('../images/hostel-section4-backpack society-christchurch.jpg');
+}
+.img-homesA-C {
+  background-image: url('../images/hostel-section4-title-maxwell-tauranga.jpg');
+}
+.img-homesB-2 {
+  background-image: url('../images/hostels-section4-title-yha-christchurch.jpg');
+}
+.img-homesA-D {
+  background-image: url('../images/hostel-section4-title-swankymint-christchurch.jpg');
+}
+.swiper-slide.s2 {
+  text-align: center;
+  font-size: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: 50%;
+  background-position-y: 20%;
+}
+
+/*---swiper motel section 4 plugin----*/
+.img-homesA-E {
+  background-image: url('../images/motel-section4-title-courthouse.jpg');
+}
+.img-homesB-3 {
+  background-image: url('../images/motel-section4-title-venusmotel.jpg');
+}
+.img-homesA-F {
+  background-image: url('../images/motel-section4-title-islandmotel.jpg');
+}
+.slide-C-1-motel {
+  background-image: url('../images/motel-section4-oddsson-christchurch.jpg');
+  background-position-x: 20%;
+}
+.slide-C-2-motel {
+  background-image: url('../images/motel-section4-countbaros-wellington.jpg');
+  background-position-x: 50%;
+}
+.slide-C-3-motel {
+  background-image: url('../images/motel-section4-greenwich-dunedin.jpg');
+  background-position-x: 20%;
+}
+.slide-C-4-motel {
+  background-image: url('../images/motel-section4-craigloft-tongariro.jpg');
+  background-position-x: 20%;
+}
+.slide-C-5-motel {
+  background-image: url('../images/motel-section4-masseria-tauranga.jpg');
+  background-position-x: 50%;
+}
+.slide-C-6-motel {
+  background-image: url('../images/motel-section4-maryland-queenstown.jpg');
+  background-position-x: 50%;
+}
+.slide-C-7-motel {
+  background-image: url('../images/motel-section4-heavenpalace-auckland.jpg');
+  background-position-x: 50%;
+}
+.slide-C-8-motel {
+  background-image: url('../images/motel-section4-starrynight-napier.jpg');
+  background-position-x: 50%;
+}
+.slide-C-9-motel {
+  background-image: url('../images/motel-section4-seasonheart-queenstown.jpg');
+  background-position-x: 50%;
+}
+.slide-C-10-motel {
+  background-image: url('../images/motel-section4-townhouse-tongariro.jpg');
+  background-position-x: 50%;
+}
+
+/*---section4 house swiper plugin---*/
+.img-homesA-G {
+  background-image: url('../images/house-section4-sandyhouse-christchurch.jpg');
+}
+.img-homesB-4 {
+  background-image: url('../images/house-section4-title-isleofulva.jpg');
+  background-position-x: 70%;
+}
+.img-homesA-H {
+  background-image: url('../images/house-section4-patterson-christchurch.jpg');
+  background-position-x: 70%;
+}
+.slide-D-1-house {
+  background-image: url('../images/house-section4-besse-dunedin.jpg');
+  background-position-x: 70%;
+}
+.slide-D-2-house {
+  background-image: url('../images/house-section4-brownpalace-tauranga.jpg');
+  background-position-x: 80%;
+}
+.slide-D-3-house {
+  background-image: url('../images/house-section4-casatera-tongariro.jpg');
+  background-position-x: 20%;
+}
+.slide-D-4-house {
+  background-image: url('../images/house-section4-century-tongariro.jpg');
+  background-position-x: 20%;
+}
+.slide-D-5-house {
+  background-image: url('../images/house-section4-girona-queenstown.jpg');
+  background-position-x: 20%;
+}
+.slide-D-6-house {
+  background-image: url('../images/house-section4-marais-nelson.jpg');
+  background-position-x: 20%;
+}
+.slide-D-7-house {
+  background-image: url('../images/house-section4-northstreet-auckland.jpg');
+  background-position-x: 20%;
+}
+.slide-D-8-house {
+  background-image: url('../images/house-section4-room-wellington.jpg');
+  background-position-x: 70%;
+}
+.slide-D-9-house {
+  background-image: url('../images/house-section4-sugden-nelson.jpg');
+  background-position-x: 60%;
+}
+.slide-D-10-house {
+  background-image: url('../images/house-section4-keri-auckland.jpg');
+  background-position-x: 50%;
+}
+.homes-sub-heading {
+  padding-bottom: 6em;
+  box-sizing: border-box;
+}
+
+/*---section5 contact us----*/
+.get-in-touch {
+  background-image: url('../images/section5-getintouch-scrubbybay.jpg');
+  background-position-x: 60%;
+  height: 30em;
+  width: 100%;
+}
+.contact-image {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.contact {
+  color: #00B0FC;
+}
+.contact-details {
+  background-image: url('../images/section5-seascape.jpg');
+  height: 30em;
+  width: 50%;
+  margin-left: 50%;
+  background-position-x: 50%;
+}
+footer {
+  height: 20em;
+  width: 100%;
+  background-color: #000;
+  margin-top: 0;
+  padding-top: 0;
+}
+.list-container {
+  width: 90%;
+  margin: auto;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5em;
+  font-weight: 300;
+}
+.menu-selection {
+  flex: 0 0 50%;
+  text-align: left;
+  padding-top: 3em;
+}
+.find-us {
+  flex: 0 0 50%;
+  padding-top: 3em;
+}
+
+/*for small tablet - inclusive*/
+@media only screen and (min-width:40em) {
+  body:before {
+    content: 'tablet';
+    background-color: rgba(0, 0, 0, 0.2);
+    position: fixed;
+    padding: 0.5em;
+    right: 0;
+    top: 0;
+  }
+}
+
+/*for small tablet - exclusive - use with care*/
+@media only screen and (min-width:40em) and (max-width:59.99999em) {
+}
+
+/*for tablet - inclusive*/
+@media only screen and (min-width:60em) {
+}
+
+/*for destop - inclusive*/
+@media only screen and (min-width:80em) {
+  body:before {
+    content: 'desktop';
+    background-color: rgba(0, 0, 0, 0.2);
+    position: fixed;
+    padding: 0.5em;
+    right: 0;
+    top: 0;
+  }
+}

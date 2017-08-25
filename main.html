@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<!-- <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"> -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/base-min.css">
+		<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/forms-min.css">
+		<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/forms-nr-min.css">
+		<link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/base-min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,600,700,800" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Muli:200,300,400,600,700,800,900" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Archivo+Black" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Heebo:100,300,400,500,700,800,900" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,500i,700,900" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Arimo:400,400i,700,700i|Cousine:400,400i,700,700i" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Pontano+Sans" rel="stylesheet">
+		<link rel="stylesheet" href="datepicker/datepicker.css">
+		<link rel="stylesheet" href="css/swiper.min.css">
+		<link rel="stylesheet" href="css/styles.css">
+		<title>Document</title>
+	</head>
+	<body>
+		
+		<div id="slide-button">
+			<div class="menu-close-btn"></div>
+			<ul class="menu-list">
+				<li class="menu-item active"><a href="#" data-to=".section1" class="menu-link">Home</a></li>
+				<li class="menu-item"><a href="#" data-to=".section2" class="menu-link">Cost</a></li>
+				<li class="menu-item"><a href="#" data-to=".section3" class="menu-link">Places</a></li>
+				<li class="menu-item"><a href="#" data-to=".section4" class="menu-link">Homes</a></li>
+				<li class="menu-item"><a href="#" data-to=".section5" class="menu-link">Contact</a></li>
+				<!-- <li class="menu-item"><a href="#" data-to=".section6" class="menu-link">Contact</a></li> -->
+			</ul>
+		</div>
+		<!-- section1 -->
+		<div class="container section1">
+			<div class="background-image landing-img">
+				<div class="text-main">
+					<div class="lorem text-section1-B logo-section1">Tourism<br>New Zealand</div>
+				</div>
+				<div class="text-main">
+					<div class="lorem text-section1-A">Come as you are</div>
+					<div class="lorem text-section1-B">Experience<br>New Zealand</div>
+				</div>
+				<div class="main">
+					<div id="nav-icon1">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- section2 -->
+		<div class="container section2">
+			<div class="background-image">
+				<div class="text-main text-main2">
+					<div class="lorem text-section2-A">Cost</div>
+					<div class="lorem text-section2 postY" data-move-up-speed="2.5">Are you visiting New Zealand?<br>Find your accomodation cost, right here.</div>
+				</div>
+				<div class="title">
+					<p>Explore unique homes and experience a city like a local.</p>
+				</div>
+				
+				<form id="builder-validate" action="#" method="post">
+					<fieldset>
+						<div class="builder-accordian_head" data-state="close">
+							<div class="builder-accordian_head-tick">1</div>
+							<h1 class="builder-accordian_head-title">Your Holiday Plan</h1>
+							<div class="builder-accordian_head-icon bounce"><i class="down" id="down-input"></i></div>
+							<div class="builder-accordian_head-icon bounce"><i class="up" id="up-input"></i></div>
+							<div class="builder-tick-feedback" id="builder-tick-input"></div>
+						</div>
+						
+						<div class="builder-accordian_body holiday-accordian">
+							<div class="builder-accordian_content">
+								<input id="guests" type="text" name="guests" placeholder="Guests" value="">
+							</div>
+							
+							<div class="builder-accordian_content">
+								<input id="days" type="text" name="days" placeholder="Days" value="">
+								<button type="submit" class="pure-button" id="search-btn">Search</button>
+							</div>
+							
+						</div>
+					</fieldset>
+				</form>
+			</div>
+			<!--- hotel option -->
+			<form>
+				<fieldset>
+					<div class="builder-accordian_head" data-state="close">
+						<div class="builder-accordian_head-tick">2</div>
+						<h1 class="builder-accordian_head-title">Your Home Option</h1>
+						<div class="builder-accordian_head-icon bounce"><i class="down" id="down-hotel"></i></div>
+						<div class="builder-accordian_head-icon bounce"><i class="up" id="up-hotel"></i></div>
+						<div class="builder-tick-feedback" id="builder-tick-hotel"></div>
+					</div>
+					<div class="builder-accordian_body home-plan-accordian">
+						<div class="builder-accordian_content planA">
+							<div class="image img-home-1">
+								<input type="radio" id="hotelA" class="hotelA" name="accomodation" value=157>
+								<label for="hotelA" id="hotelAR"></label>
+							</div>
+							<div class="price-container">
+								<p>Hotel 1-2person NZ$157 per night</p>
+								<div id="priceA"></div>
+							</div>
+							<div class="disable-container test container-A"></div>
+						</div>
+						
+						<div class="builder-accordian_content planB">
+							<div class="image img-home-2">
+								<input type="radio" id="hostelB" class="hostelB" name="accomodation" value=30>
+								<label for="hostelB" id="hostelBR"></label>
+							</div>
+							<div class="price-container">
+								<p>Hostel 1-1person NZ$30 per night</p>
+								<div id="priceB"></div>
+							</div>
+							<div class="disable-container test container-B"></div>
+						</div>
+						<div class="builder-accordian_content planC">
+							<div class="image img-home-3">
+								<input type="radio" id="motelC" class="motelC" name="accomodation" value=90>
+								<label for="motelC" id="motelCR"></label>
+							</div>
+							<div class="price-container">
+								<p>Motel 2-4person NZ$90 per night</p>
+								<div id="priceC"></div>
+							</div>
+							<div class="disable-container test container-C"></div>
+						</div>
+						<div class="builder-accordian_content planD">
+							<div class="image img-home-4">
+								<input type="radio" id="houseD" class="houseD" name="accomodation" value=240>
+								<label for="houseD" id="houseDR"></label>
+							</div>
+							<div class="price-container">
+								<p>House 1-4person NZ$240 per night</p>
+								<div id="priceD"></div>
+							</div>
+							<div class="disable-container test container-D"></div>
+						</div>
+						<div class="builder-accordian_content planE">
+							<button type="submit" class="pure-button" id="back-btn-home">Back</button>
+							<button type="submit" class="pure-button" id="next-btn-home">Next</button>
+						</div>
+						
+					</div>
+				</fieldset>
+			</form>
+			
+			<!-- meal option -->
+			<form>
+				<fieldset>
+					<div class="builder-accordian_head" data-state="close">
+						<div class="builder-accordian_head-tick">3</div>
+						<h1 class="builder-accordian_head-title">Your Meal Option</h1>
+						<div class="builder-accordian_head-icon bounce"><i class="down" id="down-meal"></i></div>
+						<div class="builder-accordian_head-icon bounce"><i class="up" id="up-meal"></i></div>
+						<div class="builder-tick-feedback" id="builder-tick-meal"></div>
+					</div>
+					<div class="builder-accordian_body meal-plan-accordian">
+						<!-- <p>do you want breakfast?</p>
+						<p>yes, please</p>
+						<p>no,thanks</p> -->
+						<div class="builder-accordian_content mealA">
+							<div class="image img-meal-1">
+								<input type="radio" id="A" class="A" name="meal" value=25.50>
+								<label for="A" id="AR"></label>
+							</div>
+							<div class="price-container">
+								<p>Te Kuiti Salad Breakfast: $25.50 per day</p>
+								<div id="mealpriceA"></div>
+							</div>
+						</div>
+						<div class="builder-accordian_content mealB">
+							<div class="image img-meal-2">
+								<input type="radio" id="B" class="B" name="meal" value=32.50>
+								<label for="B" id="BR"></label>
+							</div>
+							<div class="price-container">
+								<p>Matamata Big Breakfast: $32.50 per day</p>
+								<div id="mealpriceB"></div>
+							</div>
+						</div>
+						<div class="builder-accordian_content mealC">
+							<div class="image img-meal-3">
+								<input type="radio" id="C" class="C" name="meal" value=22.50>
+								<label for="C" id="CR"></label>
+							</div>
+							<div class="price-container">
+								<p>Rangitoto Waffles Breakfast: $22.50 per day</p>
+								<div id="mealpriceC"></div>
+							</div>
+						</div>
+						<div class="builder-accordian_content mealD">
+							<div class="image img-meal-4">
+								<input type="radio" id="D" class="D" name="meal" value=7.50>
+								<label for="D" id=DR></label>
+							</div>
+							<div class="price-container">
+								<p>Hokitika Toast Breakfast: $7.50 per day</p>
+								<div id="mealpriceD"></div>
+							</div>
+						</div>
+						<div class="builder-accordian_content mealE">
+							<button type="submit" class="pure-button" id="back-btn-meal">Back</button>
+							<button type="submit" class="pure-button" id="next-btn-meal">Next</button>
+						</div>
+					</div>
+				</fieldset>
+			</form>
+			
+			<!-- final cost -->
+			<form>
+				<fieldset>
+					<div class="builder-accordian_head" data-state="close">
+						<div class="builder-accordian_head-tick">4</div>
+						<h1 class="builder-accordian_head-title">Total Cost</h1>
+						<div class="builder-accordian_head-icon bounce"><i class="down" id="down-cost"></i></div>
+						<div class="builder-accordian_head-icon bounce"><i class="up" id="up-cost"></i></div>
+					</div>
+					<div class="builder-accordian_body cost-plan-accordian">
+						<div class="builder-accordian_content">
+							<div class="total-cost">
+								<div class="accomodation-price">Accomodation</div>
+								<div class="acco-dollar">NZ$</div>
+								<div class="accomodation-output">0</div>
+								<div class="meal-price">Meal</div>
+								<div class="meal-dollar">NZ$</div>
+								<div class="meal-output">0</div>
+								<div class="total-price">Total</div>
+								<div class="total-dollar">NZ$</div>
+								<div class="total-output">0</div>
+							</div>
+							
+						</div>
+						<div class="builder-accordian_content costE">
+							<button type="submit" class="pure-button" id="back-btn-cost">Back</button>
+						</div>
+					</div>
+					
+				</fieldset>
+			</form>
+			
+			<div class="text-main">
+				<div class="lorem section2-sub-heading text-section-sub-heading" data-state="close" >
+				</div>
+			</div>
+		</div>
+		<!-- section3 -->
+		<div class="container section3">
+			<div class="text-main text-main3">
+				<div class="lorem text-section3-A">Places</div>
+				<div class="lorem text-section-sub-heading">From diving at Poor Knights Island one of the world’s top dive locations, exploring a glacier on the West Coast and enjoying the beauty of the Kepler Track in Fiordland National Park, a UNESCO World Heritage Site, that's paradise.</div>
+			</div>
+			
+			<div class="image-fiordland">
+				<div class="layer-image-container">
+					<div class="image-container img-cont-section3-A"></div>
+				</div>
+				<div class="text-main-container text-main-img">
+					<div class="lorem text-section3-C text3-right-title">Fiordland</div>
+					<div class="text3-P text3-right-description">
+						<p>Lorem ipsum dolor sit amet, urna quis ornare nulla tellus, nunc convallis in varius et a purus, congue urna wisi dolor. Libero mi sodales fusce sed, sit conubia nunc ipsum placerat, non odio urna, dictum odio aenean.</p>
+						<div class="section3-btn-right">
+							<button class="pure-button bounce" id="read-more-btn-right-fiordland">Read More</button>
+						</div>
+					</div>
+					<div class="text3-read read-description-right-fiordland" data-state="close" >
+						<p>Lorem ipsum dolor sit amet, urna quis ornare nulla tellus, nunc convallis in varius et a purus, congue urna wisi dolor. Libero mi sodales fusce sed, sit conubia nunc ipsum placerat, non odio urna, dictum odio aenean. Faucibus ultrices vulputate, quisque ut eget venenatis integer, egestas pede quis adipiscing, nibh lobortis commodo. Ut justo malesuada neque ac consectetuer, donec ullamcorper semper in leo id, id ratione vulputate quam nonummy ultricies pulvinar, aenean mattis arcu. Scelerisque fugit, etiam sit, arcu amet nisl mauris curabitur nec fusce, malesuada sed.</p>
+					</div>
+				</div>
+			</div>
+			<div class="image-mtcook">
+				<div class="layer-image-container">
+					<div class="image-container img-cont-section3-B"></div>
+				</div>
+				<div class="text-main-container text-main-img">
+					<div class="lorem text-section3-C text3-right-title">Mt Cook</div>
+					<div class="text3-P text3-right-description">
+						<p>Lorem ipsum dolor sit amet, urna quis ornare nulla tellus, nunc convallis in varius et a purus, congue urna wisi dolor. Libero mi sodales fusce sed, sit conubia nunc ipsum placerat, non odio urna, dictum odio aenean.</p>
+						<div class="section3-btn-right">
+							<button class="pure-button bounce" id="read-more-btn-right-mtcook">Read More</button>
+						</div>
+					</div>
+					<div class="text3-read read-description-right-mtcook" data-state="close" >
+						<p>Lorem ipsum dolor sit amet, urna quis ornare nulla tellus, nunc convallis in varius et a purus, congue urna wisi dolor. Libero mi sodales fusce sed, sit conubia nunc ipsum placerat, non odio urna, dictum odio aenean. Faucibus ultrices vulputate, quisque ut eget venenatis integer, egestas pede quis adipiscing, nibh lobortis commodo. Ut justo malesuada neque ac consectetuer, donec ullamcorper semper in leo id, id ratione vulputate quam nonummy ultricies pulvinar, aenean mattis arcu. Scelerisque fugit, etiam sit, arcu amet nisl mauris curabitur nec fusce, malesuada sed.</p>
+					</div>
+				</div>
+			</div>
+			<div class="image-tongariro">
+				<div class="layer-image-container">
+					<div class="image-container img-cont-section3-C"></div>
+				</div>
+				<div class="text-main-container text-main-img">
+					<div class="lorem text-section3-C text3-left-title">Tongariro</div>
+					<div class="text3-P text3-left-description">
+						<p>Lorem ipsum dolor sit amet, urna quis ornare nulla tellus, nunc convallis in varius et a purus, congue urna wisi dolor. Libero mi sodales fusce sed, sit conubia nunc ipsum placerat, non odio urna, dictum odio aenean.</p>
+						<div class="section3-btn-left">
+							<button class="pure-button bounce" id="read-more-btn-left-tongariro">Read More</button>
+						</div>
+					</div>
+					<div class="text3-read read-description-left-tongariro" data-state="close" >
+						<p>Lorem ipsum dolor sit amet, urna quis ornare nulla tellus, nunc convallis in varius et a purus, congue urna wisi dolor. Libero mi sodales fusce sed, sit conubia nunc ipsum placerat, non odio urna, dictum odio aenean. Faucibus ultrices vulputate, quisque ut eget venenatis integer, egestas pede quis adipiscing, nibh lobortis commodo. Ut justo malesuada neque ac consectetuer, donec ullamcorper semper in leo id, id ratione vulputate quam nonummy ultricies pulvinar, aenean mattis arcu. Scelerisque fugit, etiam sit, arcu amet nisl mauris curabitur nec fusce, malesuada sed.</p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="image-queenstown">
+				<div class="layer-image-container">
+					<div class="image-container img-cont-section3-D"></div>
+				</div>
+				<div class="text-main-container text-main-img">
+					<div class="lorem text-section3-C text3-left-title qt-title">Queens<br>town</div>
+					<div class="text3-P text3-left-description">
+						<p>Lorem ipsum dolor sit amet, urna quis ornare nulla tellus, nunc convallis in varius et a purus, congue urna wisi dolor. Libero mi sodales fusce sed, sit conubia nunc ipsum placerat, non odio urna, dictum odio aenean.</p>
+						<div class="section3-btn-left">
+							<button class="pure-button bounce" id="read-more-btn-left-queenstown">Read More</button>
+						</div>
+					</div>
+					<div class="text3-read read-description-left-queenstown" data-state="close" >
+						<p>Lorem ipsum dolor sit amet, urna quis ornare nulla tellus, nunc convallis in varius et a purus, congue urna wisi dolor. Libero mi sodales fusce sed, sit conubia nunc ipsum placerat, non odio urna, dictum odio aenean. Faucibus ultrices vulputate, quisque ut eget venenatis integer, egestas pede quis adipiscing, nibh lobortis commodo. Ut justo malesuada neque ac consectetuer, donec ullamcorper semper in leo id, id ratione vulputate quam nonummy ultricies pulvinar, aenean mattis arcu. Scelerisque fugit, etiam sit, arcu amet nisl mauris curabitur nec fusce, malesuada sed.</p>
+					</div>
+				</div>
+			</div>
+			<div class="more-places"></div>
+		</div>
+		<!-- section4 -->
+		<div class="container section4">
+			<div class="lorem text-section4-A">Homes</div>
+			<div class="text-main">
+				<div class="lorem text-section-sub-heading" data-state="close" >
+					<p>Lorem ipsum dolor sit amet, urna quis ornare nulla tellus, nunc convallis in varius et a purus, congue urna wisi dolor. Libero mi sodales fusce sed, sit conubia nunc ipsum placerat, non odio urna, dictum odio aenean. Faucibus ultrices vulputate, quisque ut eget venenatis integer, egestas pede quis adipiscing, nibh lobortis commodo.</p><br>
+					<p>Lorem ipsum dolor sit amet, urna quis ornare nulla tellus, nunc convallis in varius et a purus, congue urna wisi dolor. Libero mi sodales fusce sed, sit conubia nunc ipsum placerat, non odio urna, dictum odio aenean. Faucibus ultrices vulputate, quisque ut eget venenatis integer, egestas pede quis adipiscing, nibh lobortis commodo.</p>
+				</div>
+			</div>
+			<!-- hotel section4 title -->
+			<div class="lorem text-section4-A beautiful-homes">Hotels</div>
+			<div class="layer-image-container">
+				<div class="lorem text-section4-A beautiful-homes title-on-box tob-right">Casa Fayetti,<br>Napier</div>
+				<div class="image-container img-cont-section4-A img-homesA-A"></div>
+			</div>
+			<div class="layer-image-container">
+				<div class="image-container img-cont-section4-B img-homesB-1"></div>
+			</div>
+			<div class="layer-image-container">
+				<div class="lorem text-section4-A beautiful-homes title-on-box tob-right">Grupo Habita,<br>Wellington</div>
+				<div class="image-container img-cont-section4-A img-homesA-B"></div>
+			</div>
+			<div class="lorem text-section4-A beautiful-homes title-on-box tob-left">Find more<br>hotels</div>
+			<!-- swiper plugin section 4 s1 hotel-->
+			<div class="swiper-cont-hotel">
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide s1 slide-1-hotel">
+							<div class="lorem text-section4-A beautiful-homes title-on-box tob-left subtitle">Langham,<br>Auckland</div>
+						</div>
+						<div class="swiper-slide s1 slide-2-hotel">
+							<div class="lorem text-section4-A beautiful-homes title-on-box tob-left subtitle">W. Elm,<br>Wellington</div>
+						</div>
+						<div class="swiper-slide s1 slide-3-hotel">
+							<div class="lorem text-section4-A beautiful-homes title-on-box tob-left subtitle">S.Apls,<br>Queenstown</div>
+						</div>
+						<div class="swiper-slide s1 slide-4-hotel">
+							<div class="lorem text-section4-A beautiful-homes title-on-box tob-left subtitle">Marvel,<br>Nelson</div>
+						</div>
+						<div class="swiper-slide s1 slide-5-hotel">
+							<div class="lorem text-section4-A beautiful-homes title-on-box tob-left subtitle">Oppenheim,<br>Dunedin</div>
+						</div>
+						<div class="swiper-slide s1 slide-6-hotel">
+							<div class="lorem text-section4-A beautiful-homes title-on-box tob-left subtitle">S.Heaven,<br>Tauranga</div>
+						</div>
+						<div class="swiper-slide s1 slide-7-hotel">
+							<div class="lorem text-section4-A beautiful-homes title-on-box tob-left subtitle">Callas,<br>Napier</div>
+						</div>
+						<div class="swiper-slide s1 slide-8-hotel">
+							<div class="lorem text-section4-A beautiful-homes title-on-box tob-left subtitle">Bauhaus,<br>Fiordland</div>
+						</div>
+						<div class="swiper-slide s1 slide-9-hotel">
+							<div class="lorem text-section4-A beautiful-homes title-on-box tob-left subtitle">Chateau,<br>Tongariro</div>
+						</div>
+						<div class="swiper-slide s1 slide-10-hotel">
+							<div class="lorem text-section4-A beautiful-homes title-on-box tob-left subtitle">Hermitage,<br>Mt.Cook</div>
+						</div>
+					</div>
+					<!-- Add Pagination -->
+					<div class="swiper-pagination s1"></div>
+				</div>
+			</div>
+			<div class="text-main">
+				<div class="lorem text-section-sub-heading" data-state="close" >
+					<p>Lorem ipsum dolor sit amet, urna quis ornare nulla tellus, nunc convallis in varius et a purus, congue urna wisi dolor. Libero mi sodales fusce sed, sit conubia nunc ipsum placerat, non odio urna, dictum odio aenean. Faucibus ultrices vulputate, quisque ut eget venenatis integer, egestas pede quis adipiscing, nibh lobortis commodo.</p>
+				</div>
+			</div>
+			<!-- swiper plugin hostel title section4 -->
+			<div class="lorem text-section4-A beautiful-homes">Hostels</div>
+			<div class="layer-image-container">
+				<div class="lorem text-section4-A beautiful-homes title-on-box tob-right">Title Plus,<br>Queenstown</div>
+				<div class="image-container img-cont-section4-A img-homesA-C"></div>
+			</div>
+			<div class="layer-image-container">
+				<div class="image-container img-cont-section4-B img-homesB-2"></div>
+			</div>
+			<div class="layer-image-container">
+				<div class="lorem text-section4-A beautiful-homes title-on-box tob-right">Full Moon,<br>Christchurch</div>
+				<div class="image-container img-cont-section4-A img-homesA-D"></div>
+			</div>
+			<div class="lorem text-section4-A beautiful-homes title-on-box tob-left">Find more<br>hostels</div>
+			
+			<!-- swiper 2  plugin section4 hostels s2 -->
+			<div class="swiper-cont-hostel">
+				<div class="swiper-container s2">
+					<div class="swiper-wrapper s2 ">
+						<div class="swiper-slide s2 slide-B-1-hostel">
+							<div class="lorem text-section4-A beautiful-homes title-on-box tob-left subtitle subtitle-s2">West Seven,<br>Queenstown</div>
+						</div>
+						<div class="swiper-slide s2 slide-B-2-hostel">
+							<div class="lorem text-section4-A beautiful-homes title-on-box tob-left subtitle subtitle-s2">Hobart,<br>Nelson</div>
+						</div>
+						<div class="swiper-slide s2 slide-B-3-hostel">
+							<div class="lorem text-section4-A beautiful-homes title-on-box tob-left subtitle subtitle-s2">Baroque,<br>Queenstown</div>
+						</div>
+						<div class="swiper-slide s2 slide-B-4-hostel">
+							<div class="lorem text-section4-A beautiful-homes title-on-box tob-left subtitle subtitle-s2">Chill Out,<br>Christchurch</div>
+						</div>
+						<div class="swiper-slide s2 slide-B-5-hostel">
+							<div class="lorem text-section4-A beautiful-homes title-on-box tob-left subtitle subtitle-s2">Oasis,<br>Tongariro</div>
+						</div>
+						<div class="swiper-slide s2 slide-B-6-hostel">
+							<div class="lorem text-section4-A beautiful-homes title-on-box tob-left subtitle subtitle-s2">Oasis,<br>Auckland</div>
+						</div>
+						<div class="swiper-slide s2 slide-B-7-hostel">
+							<div class="lorem text-section4-A beautiful-homes title-on-box tob-left subtitle subtitle-s2">Richmond,<br>Wellington</div>
+						</div>
+						<div class="swiper-slide s2 slide-B-8-hostel">
+							<div class="lorem text-section4-A beautiful-homes title-on-box tob-left subtitle subtitle-s2">St Haven,<br>Dunedin</div>
+						</div>
+						<div class="swiper-slide s2 slide-B-9-hostel">
+							<div class="lorem text-section4-A beautiful-homes title-on-box tob-left subtitle subtitle-s2">Snow Mountain,<br>Mt Cook</div>
+						</div>
+						<div class="swiper-slide s2 slide-B-10-hostel">
+							<div class="lorem text-section4-A beautiful-homes title-on-box tob-left subtitle subtitle-s2">Wolf Rise,<br>Queenstown</div>
+						</div>
+					</div>
+					<div class="swiper-button-next s2"></div>
+					<div class="swiper-button-prev s2"></div>
+				</div>
+			</div>
+			<div class="text-main">
+				<div class="lorem text-section-sub-heading" data-state="close" >
+					<p>Lorem ipsum dolor sit amet, urna quis ornare nulla tellus, nunc convallis in varius et a purus, congue urna wisi dolor. Libero mi sodales fusce sed, sit conubia nunc ipsum placerat, non odio urna, dictum odio aenean. Faucibus ultrices vulputate, quisque ut eget venenatis integer, egestas pede quis adipiscing, nibh lobortis commodo.</p>
+				</div>
+			</div>
+			<!-- swiper motel title section4 -->
+			<div class="lorem text-section4-A beautiful-homes">Motels</div>
+			<div class="layer-image-container">
+				<div class="lorem text-section4-A beautiful-homes title-on-box tob-right">Courthouse,<br>Queenstown</div>
+				<div class="image-container img-cont-section4-A img-homesA-E"></div>
+			</div>
+			<div class="layer-image-container">
+				<div class="image-container img-cont-section4-B img-homesB-3"></div>
+			</div>
+			<div class="layer-image-container">
+				<div class="lorem text-section4-A beautiful-homes title-on-box tob-right">Venus Motel,<br>Nelson</div>
+				<div class="image-container img-cont-section4-A img-homesA-F"></div>
+			</div>
+			<div class="lorem text-section4-A beautiful-homes title-on-box tob-left">Find more<br>motels</div>
+			<div class="swiper-cont-motel">
+				<div class="swiper-container ">
+					<div class="swiper-wrapper ">
+						<div class="swiper-slide s1 slide-C-1-motel">
+							<div class="lorem text-section4-A beautiful-homes title-on-box tob-left subtitle">Oddsson,<br>Christchurch</div>
+						</div>
+						<div class="swiper-slide s1 slide-C-2-motel">
+							<div class="lorem text-section4-A beautiful-homes title-on-box tob-left subtitle subtitle">C.Baros,<br>Wellington</div>
+						</div>
+						<div class="swiper-slide s1 slide-C-3-motel">
+							<div class="lorem text-section4-A beautiful-homes title-on-box tob-left subtitle subtitle">Greenwich,<br>Dunedin</div>
+						</div>
+						<div class="swiper-slide s1 slide-C-4-motel">
+							<div class="lorem text-section4-A beautiful-homes title-on-box tob-left subtitle subtitle">Craig Loft,<br>Tongariro</div>
+						</div>
+						<div class="swiper-slide s1 slide-C-5-motel">
+							<div class="lorem text-section4-A beautiful-homes title-on-box tob-left subtitle subtitle">Masseria,<br>Tauranga</div>
+						</div>
+						<div class="swiper-slide s1 slide-C-6-motel">
+							<div class="lorem text-section4-A beautiful-homes title-on-box tob-left subtitle subtitle">Maryland,<br>Queenstown</div>
+						</div>
+						<div class="swiper-slide s1 slide-C-7-motel">
+							<div class="lorem text-section4-A beautiful-homes title-on-box tob-left subtitle subtitle">Heaven P,<br>Auckland</div>
+						</div>
+						<div class="swiper-slide s1 slide-C-8-motel">
+							<div class="lorem text-section4-A beautiful-homes title-on-box tob-left subtitle subtitle">Starrynight,<br>Napier</div>
+						</div>
+						<div class="swiper-slide s1 slide-C-9-motel">
+							<div class="lorem text-section4-A beautiful-homes title-on-box tob-left subtitle subtitle">SeasonH,<br>Dunedin</div>
+						</div>
+						<div class="swiper-slide s1 slide-C-10-motel">
+							<div class="lorem text-section4-A beautiful-homes title-on-box tob-left subtitle subtitle">Townhouse,<br>Tongariro</div>
+						</div>
+					</div>
+					
+					<div class="swiper-pagination s1"></div>
+				</div>
+			</div>
+			<div class="text-main">
+				<div class="lorem text-section-sub-heading" data-state="close" >
+					<p>Lorem ipsum dolor sit amet, urna quis ornare nulla tellus, nunc convallis in varius et a purus, congue urna wisi dolor. Libero mi sodales fusce sed, sit conubia nunc ipsum placerat, non odio urna, dictum odio aenean. Faucibus ultrices vulputate, quisque ut eget venenatis integer, egestas pede quis adipiscing, nibh lobortis commodo.</p>
+				</div>
+			</div>
+			<!-- swiper plugin section4 title house -->
+			<div class="lorem text-section4-A beautiful-homes">House</div>
+			<div class="layer-image-container">
+				<div class="lorem text-section4-A beautiful-homes title-on-box tob-right">Sandy House,<br>Christchurch</div>
+				<div class="image-container img-cont-section4-A img-homesA-G"></div>
+			</div>
+			<div class="layer-image-container">
+				<div class="image-container img-cont-section4-B img-homesB-4"></div>
+			</div>
+			<div class="layer-image-container">
+				<div class="lorem text-section4-A beautiful-homes title-on-box tob-right">Patterson,<br>Christchurch</div>
+				<div class="image-container img-cont-section4-A img-homesA-H"></div>
+			</div>
+			<div class="lorem text-section4-A beautiful-homes title-on-box tob-left">Find more<br>holiday houses</div>
+			<!-- swiper plugin house section4- -->
+			<div class="swiper-cont-house">
+				<div class="swiper-container s2">
+					<div class="swiper-wrapper s2 ">
+						<div class="swiper-slide s2 slide-D-1-house">
+							<div class="lorem text-section4-A beautiful-homes title-on-box tob-left subtitle subtitle-s2">West Seven,<br>Queenstown</div>
+						</div>
+						<div class="swiper-slide s2 slide-D-2-house">
+							<div class="lorem text-section4-A beautiful-homes title-on-box tob-left subtitle subtitle-s2">Hobart,<br>Nelson</div>
+						</div>
+						<div class="swiper-slide s2 slide-D-3-house">
+							<div class="lorem text-section4-A beautiful-homes title-on-box tob-left subtitle subtitle-s2">Baroque,<br>Queenstown</div>
+						</div>
+						<div class="swiper-slide s2 slide-D-4-house">
+							<div class="lorem text-section4-A beautiful-homes title-on-box tob-left subtitle subtitle-s2">Chill Out,<br>Christchurch</div>
+						</div>
+						<div class="swiper-slide s2 slide-D-5-house">
+							<div class="lorem text-section4-A beautiful-homes title-on-box tob-left subtitle subtitle-s2">Oasis,<br>Tongariro</div>
+						</div>
+						<div class="swiper-slide s2 slide-D-6-house">
+							<div class="lorem text-section4-A beautiful-homes title-on-box tob-left subtitle subtitle-s2">Oasis,<br>Auckland</div>
+						</div>
+						<div class="swiper-slide s2 slide-D-7-house">
+							<div class="lorem text-section4-A beautiful-homes title-on-box tob-left subtitle subtitle-s2">Richmond,<br>Wellington</div>
+						</div>
+						<div class="swiper-slide s2 slide-D-8-house">
+							<div class="lorem text-section4-A beautiful-homes title-on-box tob-left subtitle subtitle-s2">St Haven,<br>Dunedin</div>
+						</div>
+						<div class="swiper-slide s2 slide-D-9-house">
+							<div class="lorem text-section4-A beautiful-homes title-on-box tob-left subtitle subtitle-s2">Snow Mountain,<br>Mt Cook</div>
+						</div>
+						<div class="swiper-slide s2 slide-D-10-house">
+							<div class="lorem text-section4-A beautiful-homes title-on-box tob-left subtitle subtitle-s2">Wolf Rise,<br>Queenstown</div>
+						</div>
+					</div>
+					<div class="swiper-button-next s2"></div>
+					<div class="swiper-button-prev s2"></div>
+				</div>
+			</div>
+			<div class="text-main">
+				<div class="lorem text-section-sub-heading homes-sub-heading" data-state="close" >
+					<p>Lorem ipsum dolor sit amet, urna quis ornare nulla tellus, nunc convallis in varius et a purus, congue urna wisi dolor. Libero mi sodales fusce sed, sit conubia nunc ipsum placerat, non odio urna, dictum odio aenean. Faucibus ultrices vulputate, quisque ut eget venenatis integer, egestas pede quis adipiscing, nibh lobortis commodo.</p>
+				</div>
+			</div>
+		</div>
+		<!-- section5 -->
+		<div class="container section5">
+			<div class="lorem text-section4-A">Contact</div>
+			<div class="get-in-touch contact-image">
+				<div class="lorem text-section4-A beautiful-homes contact">Get in<br> touch</div>
+			</div>
+			<div class="contact-details contact-image">
+				<div class="lorem text-section4-A beautiful-homes contact">General<br> enquiries<br>+64 9 914 4780/<br>+64 4 462 8000</div>
+			</div>
+			<footer>
+				<div class="list-container">
+					<div class="menu-selection">
+						<p>Home</p>
+						<p>Cost</p>
+						<p>Places</p>
+						<p>Homes</p>
+						<p>Contact</p>
+					</div>
+					<div class="find-us">
+						<p>Instagram</p>
+						<p>Twitter</p>
+						<p>Youtube</p>
+						<p>Facebook</p>
+						<p>GooglePlus</p>
+					</div>
+				</div>
+			</footer>
+		</div>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.js"></script>
+		<script src="js/jquery.mask.js"></script>
+		<script src="datepicker/datepicker.js"></script>
+		<script src="js/swiper.jquery.min.js"></script>
+		<script src="js/swiper.min.js"></script>
+		<script src="js/script.js"></script>
+	</body>
+</html>
